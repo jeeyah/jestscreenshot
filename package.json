@@ -1,0 +1,27 @@
+{
+  "name": "jestscreenshot",
+  "version": "1.0.0",
+  "description": "Take screenshot automatically after each test failure or success",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wadeziegler/jestscreenshot.git"
+  },
+  "keywords": [
+    "jest",
+    "puppeteer",
+    "screenshot",
+    "test",
+    "fail",
+    "failure"
+  ],
+  "author": "Wade Ziegler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wadeziegler/jestscreenshot/issues"
+  },
+  "homepage": "https://github.com/wadeziegler/jestscreenshot#readme"
+}
