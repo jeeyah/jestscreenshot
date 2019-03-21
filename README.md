@@ -33,17 +33,20 @@ beforeAll(async () => {
   };
   
   await jestscreenshot.init(options);
+});
 ```
 
 ## In afterAll, configure jestscreenshot cleanup just prior to closing browser
 jestscreenshot needs to wait for screen shots to finish before the browser closes.
 ```javascript
-exports.afterAll = async function(browser) {
+afterAll(() => {
   jestscreenshot.cleanup(function () {
     if (browser) {
       browser.close();
     }
-    exports.close();
   });
-};
+});
+```
 
+### Example test file
+See tests/test.js for a working example.
