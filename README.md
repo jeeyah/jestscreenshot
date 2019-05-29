@@ -25,6 +25,7 @@ beforeAll(async () => {
   /** page: page object returned from Puppeteer
    * dirName: __dirname defaults to same directory as script
    * scriptName: Used in the screen shot file name
+   * onlyFailures: ONLY take screenshots on test failures, default: false
    */
   let options = {
     page: page, 
