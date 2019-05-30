@@ -7,7 +7,8 @@ exports.promiseScreenshot = null;
 let options = {
   page: null,
   dirName: null,
-  scriptName: null
+  scriptName: null,
+  onlyFailures: false
 };
 
 exports.init = async (_options) => {
@@ -61,6 +62,9 @@ async function screenshot(result) {
       options.page.screenshot({path: options.dirName + '/screenshots/0-fail-' + options.scriptName + '-' + specName + '.png'})
       .then(function() { resolve(); })
       .catch(function() { resolve(); });
+    }
+    else if (options.onlyFailures) {
+      resolve();
     }
     else {
       options.page.screenshot({path: options.dirName + '/screenshots/' + options.scriptName + '-' + specName + '.png'})
