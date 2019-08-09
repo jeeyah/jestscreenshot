@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jeeyah/jestscreenshot/issues"
   },
-  "homepage": "https://github.com/jeeyah/jestscreenshot#readme"
+  "homepage": "https://github.com/jeeyah/jestscreenshot#readme",
+  "dependencies": {
+    "del": "^4.1.1"
+  }
 }
