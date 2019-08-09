@@ -26,7 +26,7 @@ exports.init = async (_options) => {
         
         exports.promiseScreenshot = null;
         
-        Promise.waitAll([p]).then(function() {
+        Promise.all([p]).then(function() {
           exports.promiseScreenshot = screenshot(result);
           exports.promiseScreenshot.then(function() {
             exports.promiseScreenshot = null;

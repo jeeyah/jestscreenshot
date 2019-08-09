@@ -42,10 +42,11 @@ beforeAll(async () => {
   await jestscreenshot.init(options);
 });
 
-afterAll(() => {
+afterAll((done) => {
   jestscreenshot.cleanup(function () {
     if (browser) {
       browser.close();
     }
+    done();
   });
 });
