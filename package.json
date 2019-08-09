@@ -1,6 +1,6 @@
 {
   "name": "@jeeyah/jestscreenshot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extend Jest and Puppeteer to automatically take screenshots after each test failure or success",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jeeyah/jestscreenshot/issues"
   },
-  "homepage": "https://github.com/jeeyah/jestscreenshot#readme"
+  "homepage": "https://github.com/jeeyah/jestscreenshot#readme",
+  "dependencies": {
+    "del": "^5.0.0"
+  }
 }
