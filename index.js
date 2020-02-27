@@ -55,11 +55,12 @@ exports.cleanup = function(funcCleanup) {
 }
 
 async function screenshot(result) {
-  let specName = result.fullName.replace(/\s/g, '-');
+  const specName = result.fullName.replace(/[\s/]/g, '-');
+  const scriptName = options.scriptName.replace(/[\s/]/g, '-')
   
   return new Promise(function(resolve, reject) {
     if (result.status === 'failed') {
-      options.page.screenshot({path: options.dirName + '/screenshots/0-fail-' + options.scriptName + '-' + specName + '.png'})
+      options.page.screenshot({path: options.dirName + '/screenshots/0-fail-' + scriptName + '-' + specName + '.png'})
       .then(function() { resolve(); })
       .catch(function() { resolve(); });
     }
@@ -67,7 +68,7 @@ async function screenshot(result) {
       resolve();
     }
     else {
-      options.page.screenshot({path: options.dirName + '/screenshots/' + options.scriptName + '-' + specName + '.png'})
+      options.page.screenshot({path: options.dirName + '/screenshots/' + scriptName + '-' + specName + '.png'})
       .then(function() { resolve(); })
       .catch(function() { resolve(); });
     }
