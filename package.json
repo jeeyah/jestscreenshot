@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/jeeyah/jestscreenshot#readme",
   "dependencies": {
-    "del": "^5.0.0"
+    "del": "^8.0.1"
   }
 }
